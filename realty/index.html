@@ -6,15 +6,17 @@
 	  <title>ООО "Градъ", недвижимость г.Ярославля</title>
 	  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 	  <link rel="stylesheet" type="text/css" href="css/styles.css">
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	</head>
 	<body>
 		<header class="page-header">
 			<div class="page-header__top-section">
 				<a class="page-header__logo" href="index.html">
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI7sTC5pEj-LmSYwZqPDzNuAJ2KEzZ_7fxpr1zNqS97Y_tvzojOw" height="72" alt="ООО Градъ">
+					<div class="page-header__img-wrapper"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI7sTC5pEj-LmSYwZqPDzNuAJ2KEzZ_7fxpr1zNqS97Y_tvzojOw" height="72" alt="ООО Градъ"></div>
 				</a>
 				<div class="page-header__title">
-					<img src="https://www.fonts-online.ru/img_fonts.php?id=11682&t=%D0%93%D0%A0%D0%90%D0%94%D0%AA&f=DF3DB5" alt="ООО Градъ">
+					<img src="images/logo.png" alt="ООО Градъ">
 				</div>
 			</div>
 			<nav class="main-nav">
@@ -25,7 +27,47 @@
 			  </ul>
 			</nav>
 		</header>
-		<main class="page"></main>
+		<main class="page">
+			<div class="gallery">
+				<div class="gallery__item"><img src="http://www.book-a-flat.com/images/paris-salon-2.jpg">
+				</div><div class="gallery__item"><img src="https://www.topdom.ru/gallery/flats/97/1-l.jpg">
+				</div><div class="gallery__item"><img src="http://www.ege66.ru/wp-content/uploads/2012/06/dizagn.jpg">
+				</div><div class="gallery__item"><img src="https://www.remont-f.ru/upload/resize_cache/iblock/ce9/1000_667_1c90dcf07c205e9d57687f52ee182d65f/remont-gostinoy-v-loft-stile-32.jpg">
+				</div><div class="gallery__item"><img src="http://www.book-a-flat.com/images/paris-salon-2.jpg">
+				</div><div class="gallery__item"><img src="https://www.topdom.ru/gallery/flats/97/1-l.jpg">
+				</div><div class="gallery__item"><img src="http://www.ege66.ru/wp-content/uploads/2012/06/dizagn.jpg">
+				</div><div class="gallery__item"><img src="https://www.remont-f.ru/upload/resize_cache/iblock/ce9/1000_667_1c90dcf07c205e9d57687f52ee182d65f/remont-gostinoy-v-loft-stile-32.jpg">
+				</div><div class="gallery__item"><img src="http://www.book-a-flat.com/images/paris-salon-2.jpg">
+				</div><div class="gallery__item"><img src="https://www.topdom.ru/gallery/flats/97/1-l.jpg">
+				</div><div class="gallery__item"><img src="http://www.ege66.ru/wp-content/uploads/2012/06/dizagn.jpg">
+				</div><div class="gallery__item"><img src="https://www.remont-f.ru/upload/resize_cache/iblock/ce9/1000_667_1c90dcf07c205e9d57687f52ee182d65f/remont-gostinoy-v-loft-stile-32.jpg">
+				</div><div class="gallery__item"><img src="http://www.book-a-flat.com/images/paris-salon-2.jpg">
+				</div><div class="gallery__item"><img src="https://www.topdom.ru/gallery/flats/97/1-l.jpg">
+				</div><div class="gallery__item"><img src="http://www.ege66.ru/wp-content/uploads/2012/06/dizagn.jpg">
+				</div><div class="gallery__item"><img src="https://www.remont-f.ru/upload/resize_cache/iblock/ce9/1000_667_1c90dcf07c205e9d57687f52ee182d65f/remont-gostinoy-v-loft-stile-32.jpg"></div>
+			</div>
+		</main>
+		<div class="gallery__image-viewer" style="display: none;">
+			<div class="gallery__close-viewer">
+				<i class="material-icons contacts__item-icon">close</i>
+			</div>
+			<img width="100%" src="">
+		</div>
 		<footer class="page-footer"></footer>
+		<script>
+		var imageViewer = document.querySelector(".gallery__image-viewer");
+		var imageViewerImg = imageViewer.querySelector("img");
+		
+		document.querySelector('.gallery__close-viewer').onclick = function() {	
+			imageViewer.style.display = 'none';
+		};
+		
+		[].forEach.call(document.querySelectorAll('.gallery__item'), function(item) {
+			item.onclick = function() {
+				imageViewer.style.display = '';
+				imageViewerImg.setAttribute('src', item.querySelector('img').getAttribute('src'));
+			};
+		})
+		</script>
 	</body>
 </html>

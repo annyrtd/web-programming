@@ -6,15 +6,17 @@
 	  <title>ООО "Градъ", недвижимость г.Ярославля</title>
 	  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 	  <link rel="stylesheet" type="text/css" href="css/styles.css">
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	</head>
 	<body>
 		<header class="page-header">
 			<div class="page-header__top-section">
 				<a class="page-header__logo" href="index.html">
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI7sTC5pEj-LmSYwZqPDzNuAJ2KEzZ_7fxpr1zNqS97Y_tvzojOw" height="72" alt="ООО Градъ">
+					<div class="page-header__img-wrapper"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI7sTC5pEj-LmSYwZqPDzNuAJ2KEzZ_7fxpr1zNqS97Y_tvzojOw" height="72" alt="ООО Градъ"></div>
 				</a>
 				<div class="page-header__title">
-					<img src="https://www.fonts-online.ru/img_fonts.php?id=11682&t=%D0%93%D0%A0%D0%90%D0%94%D0%AA&f=DF3DB5" alt="ООО Градъ">
+					<img src="images/logo.png" alt="ООО Градъ">
 				</div>
 			</div>
 			<nav class="main-nav">
@@ -25,7 +27,78 @@
 			  </ul>
 			</nav>
 		</header>
-		<main class="page"></main>
+		<main class="page">
+			<div class="page__contacts-area">
+				<div class="contacts-form">
+					<form>
+						<p style="display: none;"><label class="contacts-form--title">Свяжитеcь с нами!</label></p>
+						<fieldset class="contacts-form--contact-info">
+							<legend class="contacts-form--section-title">Контактная информация</legend>
+							<p class="contacts-form--field" >
+								<label class="contacts-form--field-label" for="name">Имя</label>
+								<input class="contacts-form--field-input" type="text" id="name" placeholder="Иванов Иван Иванович">
+							</p>
+							<p class="contacts-form--field">
+								<label class="contacts-form--field-label" for="email">E-mail</label>
+								<input class="contacts-form--field-input" type="email" id="email" placeholder="example@gmail.com">
+							</p>
+							<p class="contacts-form--field">
+								<label class="contacts-form--field-label" for="phone">Телефон</label>
+								<input class="contacts-form--field-input" type="text" id="phone" placeholder="+7(999)123-45-67">
+							</p>
+						</fieldset>
+						<fieldset class="contacts-form--question-area">
+							<legend class="contacts-form--section-title">Ваш вопрос</legend>
+							<textarea class="contacts-form--textarea" rows="10"></textarea>
+						</fieldset>
+						<p class="contacts-form--submit-area">
+							<input class="btn btn--primary" type="submit" value="Отправить">
+							<input class="btn" type="reset" value="Очистить">
+						</p>
+					</form>
+				</div>
+				<div class="map">
+					<div class="map__image-wrapper">
+						<img src="images/map.png">
+					</div>
+					<ul class="contacts">
+						<li class="contacts__item">
+							<span class="contacts__item-content">
+								<i class="material-icons contacts__item-icon">home</i>
+								Пр-кт Октября, 12, офис 223.
+							</span>
+						</li>
+						<li class="contacts__item">
+							<span class="contacts__item-content">
+								<i class="material-icons contacts__item-icon">directions_bus</i>
+								Остановка "Лакокраска".<br>
+								Тб: 4, 8. <br>
+								Ав: 5, 6, 9, 11, 23, 42, 60, 93г.<br>
+								Марш: 46, 47, 51, 71, 80, 83, 90, 91, 95, 96, 97.<br>
+							</span>
+						</li>
+						<li class="contacts__item">
+							<span class="contacts__item-content">
+								<i class="material-icons contacts__item-icon">phone</i>
+								94-22-17; 58-56-35; 58-04-98.
+							</span>
+						</li>
+						<li class="contacts__item">
+							<span class="contacts__item-content">
+								<i class="material-icons contacts__item-icon">smartphone</i>
+								+7(922)234-54-21; +7(121)232-34-45.
+							</span>
+						</li>
+						<li class="contacts__item">
+							<span class="contacts__item-content">
+								<i class="material-icons contacts__item-icon">email</i>
+								<span class="no-line-break">grad-realty@mail.ru</span>
+							</span>
+						</li>
+					</ul>
+				</div>			
+			</div>
+		</main>
 		<footer class="page-footer"></footer>
 	</body>
 </html>

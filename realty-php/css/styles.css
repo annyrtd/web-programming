@@ -534,3 +534,15 @@ h1 {
 		margin-left: 5px;
 	}
 }
+
+#add-record-message {
+	display: none;
+	position: absolute;
+    top: 8px;
+    left: calc(50% - 100px);
+    background: white;
+    width: 200px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 0 8px 0 #ccc;
+}

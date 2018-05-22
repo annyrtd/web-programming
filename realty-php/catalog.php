@@ -30,6 +30,7 @@
 				<?php
 				$mysqli = new mysqli("localhost", "annyrtd", "", "yargrad");
 				$query = "select id, description, imageLink from flats limit 5";
+				$mysqli->query("set names utf8;");
 				$result = $mysqli->query($query);
 				while($row = $result->fetch_array(MYSQLI_ASSOC)) {
 				  echo "<div class='flat-card'>".

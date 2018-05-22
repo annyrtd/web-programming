@@ -10,7 +10,7 @@
       $query = "insert into clients (name, email, phone, comment) 
       values ('".$_POST['fio']."', '".$_POST['email']."', '".$_POST['phone']."', '".$_POST['comment']."')";
       echo $query;
-      
+      $mysqli->query("set names utf8;");
       if($mysqli->query($query))
         header('Location: ' . $_SERVER['HTTP_REFERER'] . '?added=true');
       else
